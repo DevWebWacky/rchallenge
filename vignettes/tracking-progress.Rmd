@@ -1,0 +1,109 @@
+---
+title: "Tracking Your Progress"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Tracking Your Progress}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+options(rchallenge.storage_dir = tempfile("vignette_"))
+dir.create(getOption("rchallenge.storage_dir"))
+```
+
+This guide assumes you've already solved at least one challenge, if
+you haven't yet, start with
+[Getting Started with rchallenge](getting-started.html) first.
+
+Every time you attempt a challenge, `rchallenge` quietly records it,
+locally, on your own machine, in a small file it manages for you.
+Nothing is ever sent anywhere. This local history is what powers
+streaks, stats, and the activity heatmap.
+
+## Solving something to track
+
+```{r}
+library(rchallenge)
+
+run_challenge("sum_evens", function(x) sum(x[x %% 2 == 0], na.rm = TRUE))
+```
+
+Notice the line with a flame, that's your **current streak**: the
+number of consecutive days (including today) on which you've solved
+at least one challenge.
+
+## Understanding streaks
+
+A streak counts **calendar days with at least one passing solve**, not
+individual solves. Solving five challenges today still only counts as
+one streak day. Solving nothing today doesn't break your streak
+immediately either, your streak stays alive until the day *after* the
+one you last solved something, giving you until the end of today to
+keep it going.
+
+## Checking your overall stats
+
+```{r}
+rc_stats()
+```
+
+This shows:
+
+- **Challenges solved** : how many distinct challenges you've fully
+  passed at least once (out of the total available)
+- **Total attempts** : every submission you've made, passing or not
+- **Current streak** : your active consecutive-day count
+- **Longest streak** : the best run you've ever had, even if it's
+  since ended
+
+## Viewing your activity heatmap
+
+```{r}
+rc_heatmap()
+```
+
+This shows the last 28 days as a simple grid, one row per week. Each
+symbol represents how many challenges you passed that day:
+
+- `·` : no solves that day
+- `▪` : 1 solve
+- `▓` : 2-3 solves
+- `█` : 4 or more solves
+
+It's a quick visual way to see your consistency over time — the kind
+of thing that's satisfying to watch fill in as you build a habit.
+
+## Viewing your raw history
+
+If you want the full underlying data, every single attempt, with
+timestamps, you can access it directly:
+
+```{r}
+rc_get_history()
+```
+
+This can be useful if you want to analyse your own progress further
+(for example, seeing which challenges took you multiple attempts).
+
+## Starting fresh
+
+If you ever want to wipe your local history completely, for example,
+if you're demonstrating the package to someone else, or just want a
+clean slate, you can reset it:
+
+```r
+rc_reset_history()
+```
+
+**This cannot be undone**, so use it deliberately.
+
+## What's next
+
+That's the full loop: solve challenges, build a streak, watch your
+heatmap fill in. Run `list_challenges()` any time to see what's left
+to try, and come back daily to keep your streak alive.

@@ -21,6 +21,10 @@ Imports:
     cli
 Config/roxygen2/version: 8.1.0
 Suggests: 
-    testthat (>= 3.0.0)
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0),
+    tibble
 Config/testthat/edition: 3
 URL: https://devwebwacky.github.io/rchallenge/
+VignetteBuilder: knitr
