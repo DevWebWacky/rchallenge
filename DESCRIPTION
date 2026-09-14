@@ -1,0 +1,25 @@
+Package: rchallenge
+Type: Package
+Title: Gamified Algorithmic and Data Wrangling Challenges for R
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Uwakmfon", "Paul",
+      email = "uwakmfon31@gmail.com",
+      role = c("aut", "cre")
+    )
+  )
+Description: An in-console, gamified learning and practice engine for R.
+    Solve algorithmic and data-wrangling challenges directly in RStudio,
+    get instant feedback with explanations, track your progress with a
+    local streak tracker, and automatically sync solved challenges to
+    a GitHub portfolio repository.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Imports: 
+    cli
+Config/roxygen2/version: 8.1.0
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

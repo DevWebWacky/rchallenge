@@ -1,0 +1,82 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# rchallenge <img src="man/figures/logo.svg" align="right" height="180" />
+
+<!-- badges: start -->
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
+
+`rchallenge` brings gamified, LeetCode-style algorithmic and data
+wrangling challenges directly into your R console. Solve puzzles
+against real test cases, get instant styled feedback with
+explanations, and build a daily solving streak, all running locally,
+with zero setup and zero cost.
+
+## Why rchallenge?
+
+Popular coding practice platforms (LeetCode, HackerRank, Codewars)
+barely support R. Existing R learning tools (like DataCamp) rely on
+passive video courses in a browser. `rchallenge` is different: it is
+an active, in-console practice tool built specifically for R's own
+idioms: vectorisation, the tidyverse, and statistical computing,
+with nothing to install beyond the package itself.
+
+## Installation
+
+You can install the development version of rchallenge from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("DevWebWacky/rchallenge")
+```
+```{r, include = FALSE}
+options(rchallenge.storage_dir = tempfile("readme_render_"))
+dir.create(getOption("rchallenge.storage_dir"))
+```
+
+## Quick example
+
+```{r example}
+library(rchallenge)
+
+my_solution <- function(x) sum(x[x %% 2 == 0], na.rm = TRUE)
+run_challenge("sum_evens", my_solution)
+```
+
+## Browse available challenges
+
+```{r challenges}
+list_challenges()
+```
+
+`rchallenge` currently ships with 10 challenges across four
+categories: Base R Optimisation, Tidyverse Wrangling, Vectorisation
+Efficiency, and Statistical Algorithms, ranging from Easy warm-ups to
+Medium/Hard puzzles.
+
+## Track your progress
+
+Every attempt is logged locally on your own machine, nothing is sent
+anywhere. Check your stats and keep your streak alive:
+
+```{r progress}
+rc_stats()
+rc_heatmap()
+```
+
+## License
+
+MIT © Uwakmfon Paul
