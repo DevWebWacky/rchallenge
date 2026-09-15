@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Tracking Your Progress • rchallenge</title>
+<title>Tracking Your Progress • rgrind</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
@@ -23,7 +23,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
-    <a class="navbar-brand me-2" href="../index.html">rchallenge</a>
+    <a class="navbar-brand me-2" href="../index.html">rgrind</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
@@ -38,7 +38,7 @@
 <li class="active nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/getting-started.html">Getting Started with rchallenge</a></li>
+<li><a class="dropdown-item" href="../articles/getting-started.html">Getting Started with rgrind</a></li>
     <li><a class="dropdown-item" href="../articles/tracking-progress.html">Tracking Your Progress</a></li>
   </ul>
 </li>
@@ -70,8 +70,8 @@
     
 <p>This guide assumes you’ve already solved at least one challenge, if
 you haven’t yet, start with <a href="getting-started.html">Getting
-Started with rchallenge</a> first.</p>
-<p>Every time you attempt a challenge, <code>rchallenge</code> quietly
+Started with rgrind</a> first.</p>
+<p>Every time you attempt a challenge, <code>rgrind</code> quietly
 records it, locally, on your own machine, in a small file it manages for
 you. Nothing is ever sent anywhere. This local history is what powers
 streaks, stats, and the activity heatmap.</p>
@@ -79,7 +79,7 @@ streaks, stats, and the activity heatmap.</p>
 <h2 id="solving-something-to-track">Solving something to track<a class="anchor" aria-label="anchor" href="#solving-something-to-track"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devwebwacky.github.io/rchallenge/">rchallenge</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devwebwacky.github.io/rgrind/">rgrind</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="../reference/run_challenge.html">run_challenge</a></span><span class="op">(</span><span class="st">"sum_evens"</span>, <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">x</span><span class="op">[</span><span class="va">x</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%%</a></span> <span class="fl">2</span> <span class="op">==</span> <span class="fl">0</span><span class="op">]</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -115,9 +115,9 @@ end of today to keep it going.</p>
 <h2 id="checking-your-overall-stats">Checking your overall stats<a class="anchor" aria-label="anchor" href="#checking-your-overall-stats"></a>
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/rc_stats.html">rc_stats</a></span><span class="op">(</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/rg_stats.html">rg_stats</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Your rchallenge Stats</span> <span style="color: #00BBBB;">───────────────────────────────────────────────────────</span></span></span>
+<span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Your rgrind Stats</span> <span style="color: #00BBBB;">───────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Challenges solved: 1/10</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Total attempts: 1</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> 🔥 Current streak: 1 day</span></span>
@@ -142,7 +142,7 @@ if it’s since ended</li>
 <h2 id="viewing-your-activity-heatmap">Viewing your activity heatmap<a class="anchor" aria-label="anchor" href="#viewing-your-activity-heatmap"></a>
 </h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/rc_heatmap.html">rc_heatmap</a></span><span class="op">(</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/rg_heatmap.html">rg_heatmap</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; ── Last 28 Days</span></span>
 <span><span class="co">#&gt; <span style="color: #555555;">·</span> <span style="color: #555555;">·</span> <span style="color: #555555;">·</span> <span style="color: #555555;">·</span> <span style="color: #555555;">·</span> <span style="color: #555555;">·</span> <span style="color: #555555;">·</span></span></span>
@@ -172,9 +172,9 @@ of thing that’s satisfying to watch fill in as you build a habit.</p>
 <p>If you want the full underlying data, every single attempt, with
 timestamps, you can access it directly:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/rc_get_history.html">rc_get_history</a></span><span class="op">(</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/rg_get_history.html">rg_get_history</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt;   challenge_id           timestamp passed</span></span>
-<span><span class="co">#&gt; 1    sum_evens 2026-09-14 23:03:07   TRUE</span></span></code></pre></div>
+<span><span class="co">#&gt; 1    sum_evens 2026-09-15 01:34:59   TRUE</span></span></code></pre></div>
 <p>This can be useful if you want to analyse your own progress further
 (for example, seeing which challenges took you multiple attempts).</p>
 </div>
@@ -185,7 +185,7 @@ timestamps, you can access it directly:</p>
 if you’re demonstrating the package to someone else, or just want a
 clean slate, you can reset it:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/rc_reset_history.html">rc_reset_history</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/rg_reset_history.html">rg_reset_history</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><strong>This cannot be undone</strong>, so use it deliberately.</p>
 </div>
 <div class="section level2">

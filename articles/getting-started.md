@@ -1,11 +1,11 @@
-# Getting Started with rchallenge
+# Getting Started with rgrind
 
-## What is rchallenge?
+## What is rgrind?
 
-`rchallenge` is a package that lets you practice R by solving small
-coding puzzles, right inside your own R console. You write a function,
-submit it, and the package tells you instantly whether it’s correct,
-with a helpful explanation either way.
+`rgrind` is a package that lets you practice R by solving small coding
+puzzles, right inside your own R console. You write a function, submit
+it, and the package tells you instantly whether it’s correct, with a
+helpful explanation either way.
 
 No website, no sign-up, no internet connection needed once installed.
 Everything runs locally, on your own machine.
@@ -17,7 +17,7 @@ step, assuming you’ve never used the package before.
 
 ``` r
 
-library(rchallenge)
+library(rgrind)
 ```
 
 ## Step 2: See what challenges are available
@@ -50,9 +50,9 @@ my_solution <- function(x) {
 ```
 
 This is just a normal R function, written and tested however you’d
-normally write R code. `rchallenge` doesn’t require any special syntax ,
-any function that takes the right inputs and returns the right answer
-will work.
+normally write R code. `rgrind` doesn’t require any special syntax , any
+function that takes the right inputs and returns the right answer will
+work.
 
 ## Step 4: Submit it with `run_challenge()`
 
@@ -86,7 +86,7 @@ Notice a few things in that output:
   from.
 - A **streak** line appears too, more on that in the next guide,
   [Tracking Your
-  Progress](https://devwebwacky.github.io/rchallenge/articles/tracking-progress.md).
+  Progress](https://devwebwacky.github.io/rgrind/articles/tracking-progress.md).
 
 ## Step 5: What happens when you’re wrong?
 
@@ -132,7 +132,7 @@ Instead of a checkmark, you’ll see:
 
 This is completely normal, failing a challenge is part of learning. Read
 the hint, adjust your function, and try
-[`run_challenge()`](https://devwebwacky.github.io/rchallenge/reference/run_challenge.md)
+[`run_challenge()`](https://devwebwacky.github.io/rgrind/reference/run_challenge.md)
 again with your updated solution.
 
 ## Step 6: Try more challenges
@@ -162,13 +162,13 @@ run_challenge("count_na", function(x) sum(is.na(x)))
 
 You can explore every available challenge, along with its category and
 difficulty, using
-[`list_challenges()`](https://devwebwacky.github.io/rchallenge/reference/list_challenges.md)
+[`list_challenges()`](https://devwebwacky.github.io/rgrind/reference/list_challenges.md)
 at any time.
 
 ## What’s next
 
 Once you’re comfortable solving individual challenges, check out the
 [Tracking Your
-Progress](https://devwebwacky.github.io/rchallenge/articles/tracking-progress.md)
+Progress](https://devwebwacky.github.io/rgrind/articles/tracking-progress.md)
 guide to learn about streaks, your solving history, and the activity
-heatmap, the parts of `rchallenge` that turn practice into a habit.
+heatmap, the parts of `rgrind` that turn practice into a habit.

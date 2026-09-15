@@ -1,36 +1,35 @@
-# rchallenge
+# rgrind
 
-`rchallenge` brings gamified, LeetCode-style algorithmic and data
-wrangling challenges directly into your R console. Solve puzzles against
-real test cases, get instant styled feedback with explanations, and
-build a daily solving streak, all running locally, with zero setup and
-zero cost.
+`rgrind` brings gamified, LeetCode-style algorithmic and data wrangling
+challenges directly into your R console. Solve puzzles against real test
+cases, get instant styled feedback with explanations, and build a daily
+solving streak, all running locally, with zero setup and zero cost.
 
-## Why rchallenge?
+## Why rgrind?
 
 Popular coding practice platforms (LeetCode, HackerRank, Codewars)
 barely support R. Existing R learning tools (like DataCamp) rely on
-passive video courses in a browser. `rchallenge` is different: it is an
+passive video courses in a browser. `rgrind` is different: it is an
 active, in-console practice tool built specifically for R’s own idioms:
 vectorisation, the tidyverse, and statistical computing, with nothing to
 install beyond the package itself.
 
 ## Installation
 
-You can install the development version of rchallenge from
+You can install the development version of rgrind from
 [GitHub](https://github.com/) with:
 
 ``` r
 
 # install.packages("pak")
-pak::pak("DevWebWacky/rchallenge")
+pak::pak("DevWebWacky/rgrind")
 ```
 
 ## Quick example
 
 ``` r
 
-library(rchallenge)
+library(rgrind)
 
 my_solution <- function(x) sum(x[x %% 2 == 0], na.rm = TRUE)
 run_challenge("sum_evens", my_solution)
@@ -62,8 +61,8 @@ list_challenges()
 #> [10] "sum_evens"
 ```
 
-`rchallenge` currently ships with 10 challenges across four categories:
-Base R Optimisation, Tidyverse Wrangling, Vectorisation Efficiency, and
+`rgrind` currently ships with 10 challenges across four categories: Base
+R Optimisation, Tidyverse Wrangling, Vectorisation Efficiency, and
 Statistical Algorithms, ranging from Easy warm-ups to Medium/Hard
 puzzles.
 
@@ -74,14 +73,14 @@ anywhere. Check your stats and keep your streak alive:
 
 ``` r
 
-rc_stats()
+rg_stats()
 #> 
-#> ── Your rchallenge Stats ───────────────────────────────────────────────────────
+#> ── Your rgrind Stats ───────────────────────────────────────────────────────────
 #> ℹ Challenges solved: 1/10
 #> ℹ Total attempts: 1
 #> ℹ 🔥 Current streak: 1 day
 #> ℹ 🏆 Longest streak: 1 day
-rc_heatmap()
+rg_heatmap()
 #> 
 #> ── Last 28 Days
 #> · · · · · · ·
@@ -100,26 +99,26 @@ MIT © Uwakmfon Paul
 
 ## All functions
 
-- [`list_challenges()`](https://devwebwacky.github.io/rchallenge/reference/list_challenges.md)
+- [`list_challenges()`](https://devwebwacky.github.io/rgrind/reference/list_challenges.md)
   : List all available challenge ids
-- [`rc_get_history()`](https://devwebwacky.github.io/rchallenge/reference/rc_get_history.md)
+- [`rg_get_history()`](https://devwebwacky.github.io/rgrind/reference/rg_get_history.md)
   : Get your full local challenge attempt history
-- [`rc_get_streak()`](https://devwebwacky.github.io/rchallenge/reference/rc_get_streak.md)
+- [`rg_get_streak()`](https://devwebwacky.github.io/rgrind/reference/rg_get_streak.md)
   : Get your current solving streak
-- [`rc_heatmap()`](https://devwebwacky.github.io/rchallenge/reference/rc_heatmap.md)
+- [`rg_heatmap()`](https://devwebwacky.github.io/rgrind/reference/rg_heatmap.md)
   : Show a 28-day activity heatmap
-- [`rc_reset_history()`](https://devwebwacky.github.io/rchallenge/reference/rc_reset_history.md)
+- [`rg_reset_history()`](https://devwebwacky.github.io/rgrind/reference/rg_reset_history.md)
   : Clear your local challenge history
-- [`rc_stats()`](https://devwebwacky.github.io/rchallenge/reference/rc_stats.md)
-  : Show a summary of your overall rchallenge progress
-- [`run_challenge()`](https://devwebwacky.github.io/rchallenge/reference/run_challenge.md)
-  : Run an rchallenge puzzle against your own solution
+- [`rg_stats()`](https://devwebwacky.github.io/rgrind/reference/rg_stats.md)
+  : Show a summary of your overall rgrind progress
+- [`run_challenge()`](https://devwebwacky.github.io/rgrind/reference/run_challenge.md)
+  : Run an rgrind puzzle against your own solution
 
 # Articles
 
 ### All vignettes
 
 - [Getting Started with
-  rchallenge](https://devwebwacky.github.io/rchallenge/articles/getting-started.md):
+  rgrind](https://devwebwacky.github.io/rgrind/articles/getting-started.md):
 - [Tracking Your
-  Progress](https://devwebwacky.github.io/rchallenge/articles/tracking-progress.md):
+  Progress](https://devwebwacky.github.io/rgrind/articles/tracking-progress.md):

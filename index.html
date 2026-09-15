@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Gamified Algorithmic and Data Wrangling Challenges for R • rchallenge</title>
+<title>Gamified Algorithmic and Data Wrangling Challenges for R • rgrind</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -16,9 +16,9 @@
 <script src="deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Gamified Algorithmic and Data Wrangling Challenges for R">
-<meta name="description" content="An in-console, gamified learning and practice engine for R. Solve algorithmic and data-wrangling challenges directly in RStudio, get instant feedback with explanations, track your progress with a local streak tracker, and automatically sync solved challenges to a GitHub portfolio repository.">
-<meta property="og:description" content="An in-console, gamified learning and practice engine for R. Solve algorithmic and data-wrangling challenges directly in RStudio, get instant feedback with explanations, track your progress with a local streak tracker, and automatically sync solved challenges to a GitHub portfolio repository.">
-<meta property="og:image" content="https://devwebwacky.github.io/rchallenge/logo.svg">
+<meta name="description" content="An in-console, gamified learning and practice engine for R. Solve algorithmic and data-wrangling challenges directly in the R console, get instant styled feedback with worked explanations, and track your progress locally with a solving streak, attempt history, and an activity heatmap.">
+<meta property="og:description" content="An in-console, gamified learning and practice engine for R. Solve algorithmic and data-wrangling challenges directly in the R console, get instant styled feedback with worked explanations, and track your progress locally with a solving streak, attempt history, and an activity heatmap.">
+<meta property="og:image" content="https://devwebwacky.github.io/rgrind/logo.svg">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -26,7 +26,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
-    <a class="navbar-brand me-2" href="index.html">rchallenge</a>
+    <a class="navbar-brand me-2" href="index.html">rgrind</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
@@ -41,7 +41,7 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="articles/getting-started.html">Getting Started with rchallenge</a></li>
+<li><a class="dropdown-item" href="articles/getting-started.html">Getting Started with rgrind</a></li>
     <li><a class="dropdown-item" href="articles/tracking-progress.html">Tracking Your Progress</a></li>
   </ul>
 </li>
@@ -59,30 +59,30 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.svg" class="logo" alt=""><h1 id="rchallenge-">rchallenge <a class="anchor" aria-label="anchor" href="#rchallenge-"></a>
+<img src="logo.svg" class="logo" alt=""><h1 id="rgrind-">rgrind <a class="anchor" aria-label="anchor" href="#rgrind-"></a>
 </h1>
 </div>
 <!-- badges: start -->
 
-<p><code>rchallenge</code> brings gamified, LeetCode-style algorithmic and data wrangling challenges directly into your R console. Solve puzzles against real test cases, get instant styled feedback with explanations, and build a daily solving streak, all running locally, with zero setup and zero cost.</p>
+<p><code>rgrind</code> brings gamified, LeetCode-style algorithmic and data wrangling challenges directly into your R console. Solve puzzles against real test cases, get instant styled feedback with explanations, and build a daily solving streak, all running locally, with zero setup and zero cost.</p>
 <div class="section level2">
-<h2 id="why-rchallenge">Why rchallenge?<a class="anchor" aria-label="anchor" href="#why-rchallenge"></a>
+<h2 id="why-rgrind">Why rgrind?<a class="anchor" aria-label="anchor" href="#why-rgrind"></a>
 </h2>
-<p>Popular coding practice platforms (LeetCode, HackerRank, Codewars) barely support R. Existing R learning tools (like DataCamp) rely on passive video courses in a browser. <code>rchallenge</code> is different: it is an active, in-console practice tool built specifically for R’s own idioms: vectorisation, the tidyverse, and statistical computing, with nothing to install beyond the package itself.</p>
+<p>Popular coding practice platforms (LeetCode, HackerRank, Codewars) barely support R. Existing R learning tools (like DataCamp) rely on passive video courses in a browser. <code>rgrind</code> is different: it is an active, in-console practice tool built specifically for R’s own idioms: vectorisation, the tidyverse, and statistical computing, with nothing to install beyond the package itself.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of rchallenge from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>You can install the development version of rgrind from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"DevWebWacky/rchallenge"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"DevWebWacky/rgrind"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="quick-example">Quick example<a class="anchor" aria-label="anchor" href="#quick-example"></a>
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devwebwacky.github.io/rchallenge/">rchallenge</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devwebwacky.github.io/rgrind/">rgrind</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">my_solution</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">x</span><span class="op">[</span><span class="va">x</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%%</a></span> <span class="fl">2</span> <span class="op">==</span> <span class="fl">0</span><span class="op">]</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/run_challenge.html">run_challenge</a></span><span class="op">(</span><span class="st">"sum_evens"</span>, <span class="va">my_solution</span><span class="op">)</span></span>
@@ -111,21 +111,21 @@
 <span><span class="co">#&gt;  [4] "count_na"             "first_duplicate"      "max_consecutive_ones"</span></span>
 <span><span class="co">#&gt;  [7] "pivot_long_scores"    "remove_outliers"      "rolling_sum"         </span></span>
 <span><span class="co">#&gt; [10] "sum_evens"</span></span></code></pre></div>
-<p><code>rchallenge</code> currently ships with 10 challenges across four categories: Base R Optimisation, Tidyverse Wrangling, Vectorisation Efficiency, and Statistical Algorithms, ranging from Easy warm-ups to Medium/Hard puzzles.</p>
+<p><code>rgrind</code> currently ships with 10 challenges across four categories: Base R Optimisation, Tidyverse Wrangling, Vectorisation Efficiency, and Statistical Algorithms, ranging from Easy warm-ups to Medium/Hard puzzles.</p>
 </div>
 <div class="section level2">
 <h2 id="track-your-progress">Track your progress<a class="anchor" aria-label="anchor" href="#track-your-progress"></a>
 </h2>
 <p>Every attempt is logged locally on your own machine, nothing is sent anywhere. Check your stats and keep your streak alive:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/rc_stats.html">rc_stats</a></span><span class="op">(</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/rg_stats.html">rg_stats</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; ── Your rchallenge Stats ───────────────────────────────────────────────────────</span></span>
+<span><span class="co">#&gt; ── Your rgrind Stats ───────────────────────────────────────────────────────────</span></span>
 <span><span class="co">#&gt; ℹ Challenges solved: 1/10</span></span>
 <span><span class="co">#&gt; ℹ Total attempts: 1</span></span>
 <span><span class="co">#&gt; ℹ 🔥 Current streak: 1 day</span></span>
 <span><span class="co">#&gt; ℹ 🏆 Longest streak: 1 day</span></span>
-<span><span class="fu"><a href="reference/rc_heatmap.html">rc_heatmap</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/rg_heatmap.html">rg_heatmap</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; ── Last 28 Days</span></span>
 <span><span class="co">#&gt; · · · · · · ·</span></span>
@@ -141,14 +141,7 @@
 <p>MIT © Uwakmfon Paul</p>
 </div>
 </div>
-  </main><aside class="col-md-3"><div class="links">
-<h2 data-toc-skip>Links</h2>
-<ul class="list-unstyled">
-<li><a href="https://cloud.r-project.org/package=rchallenge" class="external-link">View on CRAN</a></li>
-</ul>
-</div>
-
-<div class="license">
+  </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
@@ -160,7 +153,7 @@
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html#citation">Citing rchallenge</a></li>
+<li><a href="authors.html#citation">Citing rgrind</a></li>
 </ul>
 </div>
 

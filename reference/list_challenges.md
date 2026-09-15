@@ -2,7 +2,7 @@
 
 Returns the ids of every challenge currently registered in the package.
 Use an id with
-[`run_challenge()`](https://devwebwacky.github.io/rchallenge/reference/run_challenge.md)
+[`run_challenge()`](https://devwebwacky.github.io/rgrind/reference/run_challenge.md)
 to attempt that challenge.
 
 ## Usage

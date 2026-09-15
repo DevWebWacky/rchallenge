@@ -2,10 +2,10 @@
 
 This guide assumes you’ve already solved at least one challenge, if you
 haven’t yet, start with [Getting Started with
-rchallenge](https://devwebwacky.github.io/rchallenge/articles/getting-started.md)
+rgrind](https://devwebwacky.github.io/rgrind/articles/getting-started.md)
 first.
 
-Every time you attempt a challenge, `rchallenge` quietly records it,
+Every time you attempt a challenge, `rgrind` quietly records it,
 locally, on your own machine, in a small file it manages for you.
 Nothing is ever sent anywhere. This local history is what powers
 streaks, stats, and the activity heatmap.
@@ -14,7 +14,7 @@ streaks, stats, and the activity heatmap.
 
 ``` r
 
-library(rchallenge)
+library(rgrind)
 
 run_challenge("sum_evens", function(x) sum(x[x %% 2 == 0], na.rm = TRUE))
 #> 
@@ -51,9 +51,9 @@ it going.
 
 ``` r
 
-rc_stats()
+rg_stats()
 #> 
-#> ── Your rchallenge Stats ───────────────────────────────────────────────────────
+#> ── Your rgrind Stats ───────────────────────────────────────────────────────────
 #> ℹ Challenges solved: 1/10
 #> ℹ Total attempts: 1
 #> ℹ 🔥 Current streak: 1 day
@@ -73,7 +73,7 @@ This shows:
 
 ``` r
 
-rc_heatmap()
+rg_heatmap()
 #> 
 #> ── Last 28 Days
 #> · · · · · · ·
@@ -102,9 +102,9 @@ timestamps, you can access it directly:
 
 ``` r
 
-rc_get_history()
+rg_get_history()
 #>   challenge_id           timestamp passed
-#> 1    sum_evens 2026-09-14 23:03:07   TRUE
+#> 1    sum_evens 2026-09-15 01:34:59   TRUE
 ```
 
 This can be useful if you want to analyse your own progress further (for
@@ -118,7 +118,7 @@ slate, you can reset it:
 
 ``` r
 
-rc_reset_history()
+rg_reset_history()
 ```
 
 **This cannot be undone**, so use it deliberately.
@@ -127,6 +127,6 @@ rc_reset_history()
 
 That’s the full loop: solve challenges, build a streak, watch your
 heatmap fill in. Run
-[`list_challenges()`](https://devwebwacky.github.io/rchallenge/reference/list_challenges.md)
+[`list_challenges()`](https://devwebwacky.github.io/rgrind/reference/list_challenges.md)
 any time to see what’s left to try, and come back daily to keep your
 streak alive.

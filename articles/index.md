@@ -3,6 +3,6 @@
 ### All vignettes
 
 - [Getting Started with
-  rchallenge](https://devwebwacky.github.io/rchallenge/articles/getting-started.md):
+  rgrind](https://devwebwacky.github.io/rgrind/articles/getting-started.md):
 - [Tracking Your
-  Progress](https://devwebwacky.github.io/rchallenge/articles/tracking-progress.md):
+  Progress](https://devwebwacky.github.io/rgrind/articles/tracking-progress.md):

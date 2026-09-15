@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="278" viewBox="0 0 680 420" role="img"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description><dc:creator>RealFaviconGenerator</dc:creator><dc:source>https://realfavicongenerator.net</dc:source></rdf:Description></rdf:RDF></metadata><title>rchallenge hex sticker logo</title><desc>A hexagon sticker logo with a dark console-style background, a terminal prompt symbol, a stylised flame, and the package name rchallenge.</desc><defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="278" viewBox="0 0 680 420" role="img"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description><dc:creator>RealFaviconGenerator</dc:creator><dc:source>https://realfavicongenerator.net</dc:source></rdf:Description></rdf:RDF></metadata><title>rgrind hex sticker logo</title><desc>A hexagon sticker logo with a dark console-style background, a terminal prompt symbol, a stylised flame, and the package name rgrind.</desc><defs>
 <clipPath id="hexClip">
 <polygon points="240,40 400,100 400,260 240,320 80,260 80,100"></polygon>
 </clipPath>
@@ -11,4 +11,4 @@
 <circle cx="242" cy="240" r="6" fill="#fde68a" opacity="0.85"></circle>
 
 <text x="240" y="300" font-family="monospace" font-size="26" font-weight="700" fill="#e6edf3" text-anchor="middle">R</text>
-</g><polygon points="240,40 400,100 400,260 240,320 80,260 80,100" fill="none" stroke="#1e2530" stroke-width="4"></polygon><text x="240" y="365" font-size="22" font-weight="500" fill="#1e2530" text-anchor="middle" font-family="monospace">rchallenge</text></svg>
+</g><polygon points="240,40 400,100 400,260 240,320 80,260 80,100" fill="none" stroke="#1e2530" stroke-width="4"></polygon><text x="240" y="365" font-size="22" font-weight="500" fill="#1e2530" text-anchor="middle" font-family="monospace">rgrind</text></svg>

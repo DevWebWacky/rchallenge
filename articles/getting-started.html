@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Getting Started with rchallenge • rchallenge</title>
+<title>Getting Started with rgrind • rgrind</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
@@ -15,7 +15,7 @@
 <link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Getting Started with rchallenge">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Getting Started with rgrind">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -23,7 +23,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
-    <a class="navbar-brand me-2" href="../index.html">rchallenge</a>
+    <a class="navbar-brand me-2" href="../index.html">rgrind</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
@@ -38,7 +38,7 @@
 <li class="active nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/getting-started.html">Getting Started with rchallenge</a></li>
+<li><a class="dropdown-item" href="../articles/getting-started.html">Getting Started with rgrind</a></li>
     <li><a class="dropdown-item" href="../articles/tracking-progress.html">Tracking Your Progress</a></li>
   </ul>
 </li>
@@ -59,7 +59,7 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../logo.svg" class="logo" alt=""><h1>Getting Started with rchallenge</h1>
+      <img src="../logo.svg" class="logo" alt=""><h1>Getting Started with rgrind</h1>
             
       
 
@@ -69,11 +69,11 @@
     
     
 <div class="section level2">
-<h2 id="what-is-rchallenge">What is rchallenge?<a class="anchor" aria-label="anchor" href="#what-is-rchallenge"></a>
+<h2 id="what-is-rgrind">What is rgrind?<a class="anchor" aria-label="anchor" href="#what-is-rgrind"></a>
 </h2>
-<p><code>rchallenge</code> is a package that lets you practice R by
-solving small coding puzzles, right inside your own R console. You write
-a function, submit it, and the package tells you instantly whether it’s
+<p><code>rgrind</code> is a package that lets you practice R by solving
+small coding puzzles, right inside your own R console. You write a
+function, submit it, and the package tells you instantly whether it’s
 correct, with a helpful explanation either way.</p>
 <p>No website, no sign-up, no internet connection needed once installed.
 Everything runs locally, on your own machine.</p>
@@ -84,7 +84,7 @@ by step, assuming you’ve never used the package before.</p>
 <h2 id="step-1-load-the-package">Step 1: Load the package<a class="anchor" aria-label="anchor" href="#step-1-load-the-package"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devwebwacky.github.io/rchallenge/">rchallenge</a></span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devwebwacky.github.io/rgrind/">rgrind</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="step-2-see-what-challenges-are-available">Step 2: See what challenges are available<a class="anchor" aria-label="anchor" href="#step-2-see-what-challenges-are-available"></a>
@@ -112,9 +112,9 @@ ones</strong>.</p>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">x</span><span class="op">[</span><span class="va">x</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%%</a></span> <span class="fl">2</span> <span class="op">==</span> <span class="fl">0</span><span class="op">]</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
 <p>This is just a normal R function, written and tested however you’d
-normally write R code. <code>rchallenge</code> doesn’t require any
-special syntax , any function that takes the right inputs and returns
-the right answer will work.</p>
+normally write R code. <code>rgrind</code> doesn’t require any special
+syntax , any function that takes the right inputs and returns the right
+answer will work.</p>
 </div>
 <div class="section level2">
 <h2 id="step-4-submit-it-with-run_challenge">Step 4: Submit it with <code>run_challenge()</code><a class="anchor" aria-label="anchor" href="#step-4-submit-it-with-run_challenge"></a>
@@ -225,7 +225,7 @@ and difficulty, using <code><a href="../reference/list_challenges.html">list_cha
 <p>Once you’re comfortable solving individual challenges, check out the
 <a href="tracking-progress.html">Tracking Your Progress</a> guide to
 learn about streaks, your solving history, and the activity heatmap, the
-parts of <code>rchallenge</code> that turn practice into a habit.</p>
+parts of <code>rgrind</code> that turn practice into a habit.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

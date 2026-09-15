@@ -1,4 +1,4 @@
-# Run an rchallenge puzzle against your own solution
+# Run an rgrind puzzle against your own solution
 
 Tests a user-submitted function against a challenge's test cases,
 printing styled pass/fail feedback to the console. On a full pass, shows
@@ -16,7 +16,7 @@ run_challenge(challenge_id, user_fun)
 - challenge_id:
 
   Character. The id of the challenge to run. See
-  [`list_challenges()`](https://devwebwacky.github.io/rchallenge/reference/list_challenges.md)
+  [`list_challenges()`](https://devwebwacky.github.io/rgrind/reference/list_challenges.md)
   for all available ids.
 
 - user_fun:
