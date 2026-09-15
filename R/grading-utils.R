@@ -10,7 +10,7 @@
 #' @return TRUE if equal under our grading rules, otherwise a character
 #'   string explaining what didn't match (so it can be shown in feedback).
 #' @keywords internal
-rc_check_equal <- function(actual, expected, ignore_row_order = TRUE) {
+rg_check_equal <- function(actual, expected, ignore_row_order = TRUE) {
 
   #Case 1: both are data.frame-like (covers tibble, data.frame, etc)
   if (is.data.frame(actual) && is.data.frame(expected)) {
@@ -65,7 +65,7 @@ rc_check_equal <- function(actual, expected, ignore_row_order = TRUE) {
 #'   allow differences up to this tolerance instead of requiring exact
 #'   equality. Useful for challenges involving randomness (e.g. bootstrap).
 #'   Ignored for data frame column-name checks.
-rc_check_equal <- function(actual, expected, ignore_row_order = TRUE, tolerance = NULL) {
+rg_check_equal <- function(actual, expected, ignore_row_order = TRUE, tolerance = NULL) {
 
   # helper so we don't repeat the tolerance-vs-exact logic in two branches
   values_equal <- function(a, b) {

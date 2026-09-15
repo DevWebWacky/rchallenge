@@ -1,8 +1,8 @@
 ---
-title: "Getting Started with rchallenge"
+title: "Getting Started with rgrind"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Getting Started with rchallenge}
+  %\VignetteIndexEntry{Getting Started with rgrind}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -12,13 +12,13 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-options(rchallenge.storage_dir = tempfile("vignette_"))
-dir.create(getOption("rchallenge.storage_dir"))
+options(rgrind.storage_dir = tempfile("vignette_"))
+dir.create(getOption("rgrind.storage_dir"))
 ```
 
-## What is rchallenge?
+## What is rgrind?
 
-`rchallenge` is a package that lets you practice R by solving small
+`rgrind` is a package that lets you practice R by solving small
 coding puzzles, right inside your own R console. You write a function,
 submit it, and the package tells you instantly whether it's correct,
 with a helpful explanation either way.
@@ -32,7 +32,7 @@ by step, assuming you've never used the package before.
 ## Step 1: Load the package
 
 ```{r}
-library(rchallenge)
+library(rgrind)
 ```
 
 ## Step 2: See what challenges are available
@@ -59,7 +59,7 @@ my_solution <- function(x) {
 ```
 
 This is just a normal R function, written and tested however you'd
-normally write R code. `rchallenge` doesn't require any special syntax
+normally write R code. `rgrind` doesn't require any special syntax
 , any function that takes the right inputs and returns the right
 answer will work.
 
@@ -123,4 +123,4 @@ and difficulty, using `list_challenges()` at any time.
 Once you're comfortable solving individual challenges, check out the
 [Tracking Your Progress](tracking-progress.html) guide to learn about
 streaks, your solving history, and the activity heatmap, the parts of
-`rchallenge` that turn practice into a habit.
+`rgrind` that turn practice into a habit.

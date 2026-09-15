@@ -1,5 +1,5 @@
 
-# rchallenge <img src="man/figures/logo.svg" align="right" height="180" />
+# rgrind <img src="man/figures/logo.svg" align="right" height="180" />
 
 <!-- badges: start -->
 
@@ -9,35 +9,34 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-`rchallenge` brings gamified, LeetCode-style algorithmic and data
-wrangling challenges directly into your R console. Solve puzzles against
-real test cases, get instant styled feedback with explanations, and
-build a daily solving streak, all running locally, with zero setup and
-zero cost.
+`rgrind` brings gamified, LeetCode-style algorithmic and data wrangling
+challenges directly into your R console. Solve puzzles against real test
+cases, get instant styled feedback with explanations, and build a daily
+solving streak, all running locally, with zero setup and zero cost.
 
-## Why rchallenge?
+## Why rgrind?
 
 Popular coding practice platforms (LeetCode, HackerRank, Codewars)
 barely support R. Existing R learning tools (like DataCamp) rely on
-passive video courses in a browser. `rchallenge` is different: it is an
+passive video courses in a browser. `rgrind` is different: it is an
 active, in-console practice tool built specifically for R’s own idioms:
 vectorisation, the tidyverse, and statistical computing, with nothing to
 install beyond the package itself.
 
 ## Installation
 
-You can install the development version of rchallenge from
+You can install the development version of rgrind from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
-pak::pak("DevWebWacky/rchallenge")
+pak::pak("DevWebWacky/rgrind")
 ```
 
 ## Quick example
 
 ``` r
-library(rchallenge)
+library(rgrind)
 
 my_solution <- function(x) sum(x[x %% 2 == 0], na.rm = TRUE)
 run_challenge("sum_evens", my_solution)
@@ -68,8 +67,8 @@ list_challenges()
 #> [10] "sum_evens"
 ```
 
-`rchallenge` currently ships with 10 challenges across four categories:
-Base R Optimisation, Tidyverse Wrangling, Vectorisation Efficiency, and
+`rgrind` currently ships with 10 challenges across four categories: Base
+R Optimisation, Tidyverse Wrangling, Vectorisation Efficiency, and
 Statistical Algorithms, ranging from Easy warm-ups to Medium/Hard
 puzzles.
 
@@ -79,14 +78,14 @@ Every attempt is logged locally on your own machine, nothing is sent
 anywhere. Check your stats and keep your streak alive:
 
 ``` r
-rc_stats()
+rg_stats()
 #> 
-#> ── Your rchallenge Stats ───────────────────────────────────────────────────────
+#> ── Your rgrind Stats ───────────────────────────────────────────────────────────
 #> ℹ Challenges solved: 1/10
 #> ℹ Total attempts: 1
 #> ℹ 🔥 Current streak: 1 day
 #> ℹ 🏆 Longest streak: 1 day
-rc_heatmap()
+rg_heatmap()
 #> 
 #> ── Last 28 Days
 #> · · · · · · ·

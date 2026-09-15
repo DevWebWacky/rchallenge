@@ -1,4 +1,4 @@
-#' Run an rchallenge puzzle against your own solution
+#' Run an rgrind puzzle against your own solution
 #'
 #' Tests a user-submitted function against a challenge's test cases,
 #' printing styled pass/fail feedback to the console. On a full pass,
@@ -49,7 +49,7 @@ run_challenge <- function(challenge_id, user_fun) {
       next
     }
 
-    check_result <- rc_check_equal(
+    check_result <- rg_check_equal(
       actual, tc$expected,
       tolerance = tc$tolerance  # NULL if not set on this test case, exact match
     )
@@ -60,7 +60,7 @@ run_challenge <- function(challenge_id, user_fun) {
     } else {
       failures[[length(failures) + 1]] <- list(
         index = i,
-        message = check_result  # rc_check_equal already gives a readable message
+        message = check_result  # rg_check_equal already gives a readable message
       )
     }
   }
@@ -70,8 +70,8 @@ run_challenge <- function(challenge_id, user_fun) {
   if (n_passed == n_tests) {
     cli::cli_alert_success("{.strong All {n_tests} tests passed!}")
 
-    rc_log_attempt(challenge_id, passed = TRUE)
-    streak <- rc_get_streak()
+    rg_log_attempt(challenge_id, passed = TRUE)
+    streak <- rg_get_streak()
     streak_word <- if (streak == 1) "day" else "days"
     cli::cli_text("{.strong \U0001F525 Current streak: {streak} {streak_word}}")
 
@@ -96,7 +96,7 @@ run_challenge <- function(challenge_id, user_fun) {
   }
 
   if (n_passed != n_tests) {
-    rc_log_attempt(challenge_id, passed = FALSE)
+    rg_log_attempt(challenge_id, passed = FALSE)
   }
 
   invisible(list(passed = n_passed, total = n_tests))

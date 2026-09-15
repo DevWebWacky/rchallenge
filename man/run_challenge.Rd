@@ -2,7 +2,7 @@
 % Please edit documentation in R/run-challenge.R
 \name{run_challenge}
 \alias{run_challenge}
-\title{Run an rchallenge puzzle against your own solution}
+\title{Run an rgrind puzzle against your own solution}
 \usage{
 run_challenge(challenge_id, user_fun)
 }

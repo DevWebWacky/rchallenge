@@ -12,15 +12,15 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-options(rchallenge.storage_dir = tempfile("vignette_"))
-dir.create(getOption("rchallenge.storage_dir"))
+options(rgrind.storage_dir = tempfile("vignette_"))
+dir.create(getOption("rgrind.storage_dir"))
 ```
 
 This guide assumes you've already solved at least one challenge, if
 you haven't yet, start with
-[Getting Started with rchallenge](getting-started.html) first.
+[Getting Started with rgrind](getting-started.html) first.
 
-Every time you attempt a challenge, `rchallenge` quietly records it,
+Every time you attempt a challenge, `rgrind` quietly records it,
 locally, on your own machine, in a small file it manages for you.
 Nothing is ever sent anywhere. This local history is what powers
 streaks, stats, and the activity heatmap.
@@ -28,7 +28,7 @@ streaks, stats, and the activity heatmap.
 ## Solving something to track
 
 ```{r}
-library(rchallenge)
+library(rgrind)
 
 run_challenge("sum_evens", function(x) sum(x[x %% 2 == 0], na.rm = TRUE))
 ```
@@ -49,7 +49,7 @@ keep it going.
 ## Checking your overall stats
 
 ```{r}
-rc_stats()
+rg_stats()
 ```
 
 This shows:
@@ -64,7 +64,7 @@ This shows:
 ## Viewing your activity heatmap
 
 ```{r}
-rc_heatmap()
+rg_heatmap()
 ```
 
 This shows the last 28 days as a simple grid, one row per week. Each
@@ -84,7 +84,7 @@ If you want the full underlying data, every single attempt, with
 timestamps, you can access it directly:
 
 ```{r}
-rc_get_history()
+rg_get_history()
 ```
 
 This can be useful if you want to analyse your own progress further
@@ -97,7 +97,7 @@ if you're demonstrating the package to someone else, or just want a
 clean slate, you can reset it:
 
 ```r
-rc_reset_history()
+rg_reset_history()
 ```
 
 **This cannot be undone**, so use it deliberately.

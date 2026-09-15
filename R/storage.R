@@ -1,10 +1,10 @@
 #' @keywords internal
-rc_storage_path <- function() {
-  # Tests can override this via options(rchallenge.storage_dir = tempdir())
+rg_storage_path <- function() {
+  # Tests can override this via options(rgrind.storage_dir = tempdir())
   # so they never touch a real user's actual history file.
-  dir <- getOption("rchallenge.storage_dir")
+  dir <- getOption("rgrind.storage_dir")
   if (is.null(dir)) {
-    dir <- tools::R_user_dir("rchallenge", which = "data")
+    dir <- tools::R_user_dir("rgrind", which = "data")
   }
   if (!dir.exists(dir)) {
     dir.create(dir, recursive = TRUE)
@@ -14,8 +14,8 @@ rc_storage_path <- function() {
 
 #' Log a single challenge attempt
 #' @keywords internal
-rc_log_attempt <- function(challenge_id, passed) {
-  path <- rc_storage_path()
+rg_log_attempt <- function(challenge_id, passed) {
+  path <- rg_storage_path()
 
   new_row <- data.frame(
     challenge_id = challenge_id,
@@ -45,12 +45,12 @@ rc_log_attempt <- function(challenge_id, passed) {
 #'
 #' @examples
 #' \dontrun{
-#' rc_get_history()
+#' rg_get_history()
 #' }
 #'
 #' @export
-rc_get_history <- function() {
-  path <- rc_storage_path()
+rg_get_history <- function() {
+  path <- rg_storage_path()
   if (!file.exists(path)) {
     return(data.frame(
       challenge_id = character(0),
@@ -70,12 +70,12 @@ rc_get_history <- function() {
 #'
 #' @examples
 #' \dontrun{
-#' rc_reset_history()
+#' rg_reset_history()
 #' }
 #'
 #' @export
-rc_reset_history <- function() {
-  path <- rc_storage_path()
+rg_reset_history <- function() {
+  path <- rg_storage_path()
   if (file.exists(path)) {
     file.remove(path)
   }
@@ -92,12 +92,12 @@ rc_reset_history <- function() {
 #'
 #' @examples
 #' \dontrun{
-#' rc_get_streak()
+#' rg_get_streak()
 #' }
 #'
 #' @export
-rc_get_streak <- function() {
-  history <- rc_get_history()
+rg_get_streak <- function() {
+  history <- rg_get_history()
 
   passed <- history[history$passed == TRUE, ]
   if (nrow(passed) == 0) {
@@ -135,8 +135,8 @@ rc_get_streak <- function() {
 
 #' Calculate the longest streak ever achieved (not just the current one)
 #' @keywords internal
-rc_longest_streak <- function() {
-  history <- rc_get_history()
+rg_longest_streak <- function() {
+  history <- rg_get_history()
   passed <- history[history$passed == TRUE, ]
   if (nrow(passed) == 0) return(0L)
 
@@ -160,7 +160,7 @@ rc_longest_streak <- function() {
   longest
 }
 
-#' Show a summary of your overall rchallenge progress
+#' Show a summary of your overall rgrind progress
 #'
 #' Prints how many challenges you've solved, your total attempts, and
 #' your current and longest solving streaks.
@@ -170,20 +170,20 @@ rc_longest_streak <- function() {
 #'
 #' @examples
 #' \dontrun{
-#' rc_stats()
+#' rg_stats()
 #' }
 #'
 #' @export
-rc_stats <- function() {
-  history <- rc_get_history()
+rg_stats <- function() {
+  history <- rg_get_history()
 
   n_solved <- length(unique(history$challenge_id[history$passed == TRUE]))
   n_total_challenges <- length(list_challenges())
   n_attempts <- nrow(history)
-  current_streak <- rc_get_streak()
-  longest_streak <- rc_longest_streak()
+  current_streak <- rg_get_streak()
+  longest_streak <- rg_longest_streak()
 
-  cli::cli_h1("Your rchallenge Stats")
+  cli::cli_h1("Your rgrind Stats")
   cli::cli_alert_info("Challenges solved: {n_solved}/{n_total_challenges}")
   cli::cli_alert_info("Total attempts: {n_attempts}")
   cli::cli_alert_info("\U0001F525 Current streak: {current_streak} day{if (current_streak != 1) 's' else ''}")
@@ -199,7 +199,7 @@ rc_stats <- function() {
 }
 
 #' @keywords internal
-rc_heatmap_symbol <- function(n_solves) {
+rg_heatmap_symbol <- function(n_solves) {
   if (n_solves == 0) return(cli::col_grey("\u00B7"))         # ·  grey, empty day
   if (n_solves == 1) return(cli::col_green("\u25AA"))         # ▪  solved once
   if (n_solves <= 3) return(cli::col_green("\u2593"))         # ▓  solved 2-3 times
@@ -216,12 +216,12 @@ rc_heatmap_symbol <- function(n_solves) {
 #'
 #' @examples
 #' \dontrun{
-#' rc_heatmap()
+#' rg_heatmap()
 #' }
 #'
 #' @export
-rc_heatmap <- function() {
-  history <- rc_get_history()
+rg_heatmap <- function() {
+  history <- rg_get_history()
   passed <- history[history$passed == TRUE, ]
 
   today <- Sys.Date()
@@ -240,7 +240,7 @@ rc_heatmap <- function() {
     } else {
       0L
     }
-    rc_heatmap_symbol(n)
+    rg_heatmap_symbol(n)
   }, character(1))
 
   cli::cli_h3("Last 28 Days")
